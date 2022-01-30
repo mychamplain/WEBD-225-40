@@ -2,25 +2,27 @@
 <html lang="en">
 <head>
     <meta name="description"
-          content="Pacific Trails Resort, a special lodging company on the California North Coast.Rent Yurts, go hiking, or relax in the heated pool">
+          content="Atlantic Fishing Resort, a special lodging company on the Namibian West Coast. Rent fishing equipment, go exploring, or relax in the heated pool">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pacific Trails Resort</title>
-    <link rel="stylesheet" href="pacific.css">
+    <title>Atlantic Fishing Resort</title>
+    <link rel="stylesheet" href="atlantic.css">
 
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
 
+    <script src="/js/geo.js"></script>
+
     <!-- Completed files -->
 </head>
 <body>
 <header id="wrapper">
-    <h1>Pacific Trails Resort</h1>
+    <h1>Atlantic Fishing Resort</h1>
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="yurts.html">Yurts</a></li>
+            <li><a href="tackle.html">Tackle</a></li>
             <li><a href="activities.html">Activities</a></li>
             <li><a href="reservations.html">Reservations</a></li>
         </ul>
@@ -39,25 +41,51 @@
     </video>
     <article>
         <h3>What We Offer</h3>
-        <p><span class="resort">Pacific Trails Resort</span> offers a special lodging experience on the California North
-            Coast.
-            Relax in serenity with panoramic views of the Pacific Ocean.</p>
+        <p><span class="resort">Atlantic Fishing Resort</span> offers a special lodging experience on the Namibian West
+            Coast.<br/>
+            Relax in serenity with panoramic views of the Atlantic Ocean.</p>
         <ul>
-            <li>Private yurts with decks overlooking the ocean</li>
-            <li>Activities lodge with fireplace and gift shop</li>
+            <li>Private apartments with beach front views</li>
+            <li>Activities in and around town</li>
+            <li>shops in walking distance</li>
             <li>Nightly fine dining at the Overlook Cafe</li>
-            <li>Heated outdoor pool and whirlpool</li>
-            <li>Guided hiking tours of the redwoods</li>
+            <li>Heated jacuzzi and sauna</li>
+            <li>Guided fishing tours</li>
         </ul>
+    </article>
+    <article>
+        <div style="padding: 50px 0;">
+            <div class="flex-container" style="display: flex; align-items: flex-start; justify-content: space-evenly;">
+                <div>
+                    <h3>Find us</h3>
+                    <h4>Using our GEO Location service</h4>
+                    <p>Allow us to check your location and we will send you tips to find us based on your current
+                        location.</p>
+                    <button type="button" id="toggleWatchBtn" style="margin-bottom: 20px;">Check my location</button>
+                    <!--Position information will be inserted here-->
+                    <div id="result" ></div>
+                </div>
+                <div style="padding: 50px 0px; ">
+                    <img id="default-image" src="/images/default.jpg" alt="Atlantic Holiday Resort"
+                         style="width: 100%;">
+                    <img id="book-flight-image" src="/images/book_flight.jpg" alt="Book a flight to Namibia"
+                         style="width: 100%; display: none;">
+                    <img id="rent-car-image" src="/images/rent_car.jpg" alt="Rent a car in Namibia"
+                         style="width: 100%; display: none;">
+                    <img id="walking-distance-image" src="/images/walking_distance.jpg" alt="Walking in the dunes"
+                         style="width: 100%; display: none;">
+                </div>
+            </div>
+        </div>
     </article>
 </main>
 <footer>
-    <span class="resort">Pacific Trails Resort</span><br>
-    12010 Pacific Trails Road<br>
-    Zephyr, CA 95555<br><br>
+    <span class="resort">Atlantic Fishing Resort</span><br>
+    12010 Atlantic Fishing Road<br>
+    Hentiesbaai, Namibia 95555<br><br>
     <a id="mobile" href="tel:888-555-5555">888-555-5555</a>
     <span id="desktop">888-555-5555</span><br><br>
-    Copyright © 2016 Pacific Trails Resort<br>
+    Copyright © 1999 Atlantic Fishing Resort<br>
     <a href="mailto:yourfirstname@yourlastname.com">yourfirstname@yourlastname.com</a>
 </footer>
 </body>
