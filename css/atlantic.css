@@ -1,0 +1,131 @@
+/* Nav Bar */
+header nav {
+    padding: 0;
+}
+
+header nav a {
+    text-decoration: none;
+}
+
+header .active {
+    text-decoration-color: lightblue;
+    padding: 0 10px;
+    background: rgb(34,34,34);
+    background: linear-gradient(0deg, rgba(34,34,34,1) 0%, rgba(84,84,84,1) 50%, rgba(34,34,34,1) 100%);
+    box-shadow: inset 0 0 10px #000000;
+}
+
+header nav ul {
+    padding-left: 0;
+    list-style-type: none;
+    background: rgb(46,44,47);
+    background: linear-gradient(0deg, rgba(46,44,47,1) 0%, rgba(110,121,122,1) 50%, rgba(46,44,47,1) 100%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: "Liberation Sans", sans-serif;
+}
+
+header ul li *[href]:link {
+    color: whitesmoke;
+    padding: 0 10px;
+    background: linear-gradient(0deg, rgba(46,44,47,1) 0%, rgba(110,121,122,1) 50%, rgba(46,44,47,1) 100%);
+    display: flex;
+    flex-grow: inherit;
+}
+
+header ul li *[href]:visited {
+    color: aliceblue;
+    padding: 0 10px;
+    background: linear-gradient(0deg, rgba(46,44,47,1) 0%, rgba(110,121,122,1) 50%, rgba(46,44,47,1) 100%);
+    display: flex;
+    flex-grow: inherit;
+}
+
+header ul li *[href]:hover {
+    color: lightskyblue;
+    padding: 0 10px;
+    background: rgb(34,34,34);
+    background: linear-gradient(0deg, rgba(34,34,34,1) 0%, rgba(84,84,84,1) 50%, rgba(34,34,34,1) 100%);
+    box-shadow: inset 0 0 10px #000000;
+}
+
+
+/* Mobile devices */
+@media screen and (max-width: 480px) {
+
+    /* flex container */
+    header nav ul {
+        height: 40px;
+        font-size: 0.9rem;
+    }
+
+    /* flex item */
+    header ul li *[href] {
+        line-height: 40px;
+        height: 40px;
+    }
+}
+
+/* iPads, Tablets. */
+@media screen and (min-width: 481px) {
+
+    /* flex container */
+    header nav ul {
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    /* flex item */
+    header ul li *[href] {
+        line-height: 40px;
+        height: 40px;
+    }
+}
+
+/* Small screens, laptops */
+@media screen and (min-width: 769px) {
+
+    header nav ul {
+        height: 50px;
+        font-size: 1.4rem;
+    }
+
+    /* flex item */
+    header ul li *[href] {
+        line-height: 50px;
+        height: 50px;
+    }
+}
+
+/* Desktops, large screens. */
+@media screen and (min-width: 1025px) {
+
+    /* flex container */
+    header nav ul {
+        height: 50px;
+        font-size: 1.6rem;
+    }
+
+    /* flex item */
+    header ul li *[href] {
+        line-height: 50px;
+        height: 50px;
+    }
+}
+
+/* Extra large screens, TV. */
+@media screen and (min-width: 1201px) {
+
+    /* flex container */
+    header nav ul {
+        height: 50px;
+        font-size: 2rem;
+    }
+
+    /* flex item */
+    header ul li *[href] {
+        line-height: 50px;
+        height: 50px;
+    }
+}
