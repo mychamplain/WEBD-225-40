@@ -10,16 +10,16 @@ header nav a {
 header .active {
     text-decoration-color: lightblue;
     padding: 0 10px;
-    background: rgb(34,34,34);
-    background: linear-gradient(0deg, rgba(34,34,34,1) 0%, rgba(84,84,84,1) 50%, rgba(34,34,34,1) 100%);
+    background: rgb(34, 34, 34);
+    background: linear-gradient(0deg, rgba(34, 34, 34, 1) 0%, rgba(84, 84, 84, 1) 50%, rgba(34, 34, 34, 1) 100%);
     box-shadow: inset 0 0 10px #000000;
 }
 
 header nav ul {
     padding-left: 0;
     list-style-type: none;
-    background: rgb(46,44,47);
-    background: linear-gradient(0deg, rgba(46,44,47,1) 0%, rgba(110,121,122,1) 50%, rgba(46,44,47,1) 100%);
+    background: rgb(46, 44, 47);
+    background: linear-gradient(0deg, rgba(46, 44, 47, 1) 0%, rgba(110, 121, 122, 1) 50%, rgba(46, 44, 47, 1) 100%);
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -29,7 +29,7 @@ header nav ul {
 header ul li *[href]:link {
     color: whitesmoke;
     padding: 0 10px;
-    background: linear-gradient(0deg, rgba(46,44,47,1) 0%, rgba(110,121,122,1) 50%, rgba(46,44,47,1) 100%);
+    background: linear-gradient(0deg, rgba(46, 44, 47, 1) 0%, rgba(110, 121, 122, 1) 50%, rgba(46, 44, 47, 1) 100%);
     display: flex;
     flex-grow: inherit;
 }
@@ -37,7 +37,7 @@ header ul li *[href]:link {
 header ul li *[href]:visited {
     color: aliceblue;
     padding: 0 10px;
-    background: linear-gradient(0deg, rgba(46,44,47,1) 0%, rgba(110,121,122,1) 50%, rgba(46,44,47,1) 100%);
+    background: linear-gradient(0deg, rgba(46, 44, 47, 1) 0%, rgba(110, 121, 122, 1) 50%, rgba(46, 44, 47, 1) 100%);
     display: flex;
     flex-grow: inherit;
 }
@@ -45,11 +45,98 @@ header ul li *[href]:visited {
 header ul li *[href]:hover {
     color: lightskyblue;
     padding: 0 10px;
-    background: rgb(34,34,34);
-    background: linear-gradient(0deg, rgba(34,34,34,1) 0%, rgba(84,84,84,1) 50%, rgba(34,34,34,1) 100%);
+    background: rgb(34, 34, 34);
+    background: linear-gradient(0deg, rgba(34, 34, 34, 1) 0%, rgba(84, 84, 84, 1) 50%, rgba(34, 34, 34, 1) 100%);
     box-shadow: inset 0 0 10px #000000;
 }
 
+#home-hero {
+    background-color: white;
+    padding: 20px;
+    -webkit-duration: 1s;
+    -moz-duration: 1s;
+    -o-duration: 1s;
+    transition-duration: 1s;
+}
+
+#home-hero:hover {
+    background-color: #a3bedb;
+}
+
+@keyframes image-fun {
+    0% {
+        left: -500px;
+        top: -300px;
+        -webkit-transform: rotateZ(0deg);
+        -moz-transform: rotateZ(0deg);
+        -o-transform: rotateZ(0deg);
+        transform: rotateZ(0deg);
+        width: 10px;
+    }
+    100% {
+        left: 0px;
+        top: 0px;
+        -webkit-transform: rotateZ(360deg);
+        -moz-transform: rotateZ(360deg);
+        -o-transform: rotateZ(360deg);
+        transform: rotateZ(360deg);
+        width: 650px;
+    }
+}
+
+@keyframes image-spin {
+    0% {
+        left: 0;
+        top: 100px;
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        -o-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+        width: 10px;
+    }
+    100% {
+        left: 0;
+        top: 0;
+        -webkit-transform: rotateY(360deg);
+        -moz-transform: rotateY(360deg);
+        -o-transform: rotateY(360deg);
+        transform: rotateY(360deg);
+        width: 650px;
+    }
+}
+
+#default-image {
+    border-radius: 20px;
+    width: 650px;
+    position: relative;
+    animation-name: image-fun;
+    animation-duration: 2s;
+}
+
+#book-flight-image, #rent-car-image, #walking-distance-image {
+    border-radius: 20px;
+    width: 650px;
+    position: relative;
+    animation-name: image-spin;
+    animation-duration: 2s;
+}
+
+#toggleWatchBtn {
+    width: 180px;
+    height: 50px;
+    background: rgb(96, 95, 95);
+    background: linear-gradient(0deg, rgba(96, 95, 95, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    -webkit-duration: .5s;
+    -moz-duration: .5s;
+    -o-duration: .5s;
+    transition-duration: .5s;
+}
+
+#toggleWatchBtn:hover {
+    width: 250px;
+    height: 60px;
+    font-size: 16px;
+}
 
 /* Mobile devices */
 @media screen and (max-width: 480px) {
