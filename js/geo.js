@@ -42,14 +42,14 @@ function getDistance(lat1, lat2, lon1, lon2) {
 
 function showPosition() {
     if (navigator.geolocation) {
-        watchID = navigator.geolocation.watchPosition(successCallback);
+        watchID = navigator.geolocation.getCurrentPosition(successCallback);
     } else {
         alert("Sorry, your browser does not support HTML5 geolocation.");
     }
 }
 
 function successCallback(position) {
-    document.getElementById("toggleWatchBtn").innerHTML = "Stop checking my location";
+    document.getElementById("toggleWatchBtn").innerHTML = "Check my Location Again";
 
     // Check position has been changed or not before doing anything
     if (prevLat != position.coords.latitude || prevLong != position.coords.longitude) {

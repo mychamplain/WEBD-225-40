@@ -50,7 +50,15 @@ header ul li *[href]:hover {
     box-shadow: inset 0 0 10px #000000;
 }
 
-#home-hero {
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+#hero {
     background-color: white;
     padding: 20px;
     -webkit-duration: 1s;
@@ -59,8 +67,25 @@ header ul li *[href]:hover {
     transition-duration: 1s;
 }
 
-#home-hero:hover {
+#hero:hover {
     background-color: #a3bedb;
+}
+
+#activity-focus {
+    background-color: white;
+    padding: 20px;
+    -webkit-duration: 1s;
+    -moz-duration: 1s;
+    -o-duration: 1s;
+    transition-duration: 1s;
+}
+
+#activity-focus:hover {
+    background-color: #c7dcf2;
+}
+
+#contact {
+    text-align: center;
 }
 
 @keyframes image-fun {
@@ -141,33 +166,38 @@ header ul li *[href]:hover {
 /* Mobile devices */
 @media screen and (max-width: 480px) {
 
-    /* flex container */
     header nav ul {
         height: 40px;
         font-size: 0.9rem;
     }
 
-    /* flex item */
     header ul li *[href] {
         line-height: 40px;
         height: 40px;
     }
 }
 
+.flex-container {
+    flex-direction: column;
+}
+
 /* iPads, Tablets. */
 @media screen and (min-width: 481px) {
 
-    /* flex container */
     header nav ul {
         height: 40px;
         font-size: 1rem;
     }
 
-    /* flex item */
     header ul li *[href] {
         line-height: 40px;
         height: 40px;
     }
+}
+
+
+.flex-container {
+    flex-direction: column;
 }
 
 /* Small screens, laptops */
@@ -178,23 +208,24 @@ header ul li *[href]:hover {
         font-size: 1.4rem;
     }
 
-    /* flex item */
     header ul li *[href] {
         line-height: 50px;
         height: 50px;
     }
 }
 
+.flex-container {
+    flex-direction: row;
+}
+
 /* Desktops, large screens. */
 @media screen and (min-width: 1025px) {
 
-    /* flex container */
     header nav ul {
         height: 50px;
         font-size: 1.6rem;
     }
 
-    /* flex item */
     header ul li *[href] {
         line-height: 50px;
         height: 50px;
@@ -204,15 +235,18 @@ header ul li *[href]:hover {
 /* Extra large screens, TV. */
 @media screen and (min-width: 1201px) {
 
-    /* flex container */
     header nav ul {
         height: 50px;
         font-size: 2rem;
     }
 
-    /* flex item */
     header ul li *[href] {
         line-height: 50px;
         height: 50px;
     }
 }
+
+.flex-container {
+    flex-direction: row;
+}
+
