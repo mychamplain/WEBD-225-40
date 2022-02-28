@@ -105,7 +105,7 @@ header ul li *[href]:hover {
         -moz-transform: rotateZ(360deg);
         -o-transform: rotateZ(360deg);
         transform: rotateZ(360deg);
-        width: 650px;
+        width: 320px;
     }
 }
 
@@ -126,13 +126,13 @@ header ul li *[href]:hover {
         -moz-transform: rotateY(360deg);
         -o-transform: rotateY(360deg);
         transform: rotateY(360deg);
-        width: 650px;
+        width: 320px;
     }
 }
 
 #default-image {
     border-radius: 20px;
-    width: 650px;
+    width: 320px;
     position: relative;
     animation-name: image-fun;
     animation-duration: 2s;
@@ -140,7 +140,7 @@ header ul li *[href]:hover {
 
 #book-flight-image, #rent-car-image, #walking-distance-image {
     border-radius: 20px;
-    width: 650px;
+    width: 320px;
     position: relative;
     animation-name: image-spin;
     animation-duration: 2s;
@@ -164,7 +164,7 @@ header ul li *[href]:hover {
 }
 
 /* Mobile devices */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 320px) {
 
     header nav ul {
         height: 40px;
@@ -175,14 +175,14 @@ header ul li *[href]:hover {
         line-height: 40px;
         height: 40px;
     }
-}
 
-.flex-container {
-    flex-direction: column;
+    h1 {
+        font-size: 20px;
+    }
 }
 
 /* iPads, Tablets. */
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 321px) {
 
     header nav ul {
         height: 40px;
@@ -193,15 +193,27 @@ header ul li *[href]:hover {
         line-height: 40px;
         height: 40px;
     }
-}
 
+    img#large_image {
+        display: none;
+    }
 
-.flex-container {
-    flex-direction: column;
+    img#small_image {
+        display: block;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    video {
+        display: none;
+    }
 }
 
 /* Small screens, laptops */
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
 
     header nav ul {
         height: 50px;
@@ -212,14 +224,89 @@ header ul li *[href]:hover {
         line-height: 50px;
         height: 50px;
     }
+
+    img#small_image {
+        display: none;
+    }
+
+    img#large_image {
+        display: block;
+        width: 100%;
+    }
+
+    .flex-container {
+        flex-direction: row;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    video {
+        display: inline-block;
+    }
+
+    @keyframes image-fun {
+        0% {
+            left: -500px;
+            top: -300px;
+            -webkit-transform: rotateZ(0deg);
+            -moz-transform: rotateZ(0deg);
+            -o-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+            width: 10px;
+        }
+        100% {
+            left: 0px;
+            top: 0px;
+            -webkit-transform: rotateZ(360deg);
+            -moz-transform: rotateZ(360deg);
+            -o-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+            width: 650px;
+        }
+    }
+    @keyframes image-spin {
+        0% {
+            left: 0;
+            top: 100px;
+            -webkit-transform: rotateY(0deg);
+            -moz-transform: rotateY(0deg);
+            -o-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+            width: 10px;
+        }
+        100% {
+            left: 0;
+            top: 0;
+            -webkit-transform: rotateY(360deg);
+            -moz-transform: rotateY(360deg);
+            -o-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+            width: 650px;
+        }
+    }
+
+    #default-image {
+        border-radius: 20px;
+        width: 650px;
+        position: relative;
+        animation-name: image-fun;
+        animation-duration: 2s;
+    }
+
+    #book-flight-image, #rent-car-image, #walking-distance-image {
+        border-radius: 20px;
+        width: 650px;
+        position: relative;
+        animation-name: image-spin;
+        animation-duration: 2s;
+    }
 }
 
-.flex-container {
-    flex-direction: row;
-}
 
 /* Desktops, large screens. */
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1024px) {
 
     header nav ul {
         height: 50px;
@@ -230,10 +317,14 @@ header ul li *[href]:hover {
         line-height: 50px;
         height: 50px;
     }
+
+    h1 {
+        font-size: 46px;
+    }
 }
 
 /* Extra large screens, TV. */
-@media screen and (min-width: 1201px) {
+@media screen and (min-width: 1401px) {
 
     header nav ul {
         height: 50px;
@@ -244,9 +335,5 @@ header ul li *[href]:hover {
         line-height: 50px;
         height: 50px;
     }
-}
-
-.flex-container {
-    flex-direction: row;
 }
 
