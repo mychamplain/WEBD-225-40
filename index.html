@@ -13,29 +13,41 @@
     <![endif]-->
 
     <script src="/js/geo.js"></script>
+    <script src="/js/hiddenNav.js"></script>
 
     <!-- Completed files -->
 </head>
 <body>
-<header id="wrapper">
+<header>
     <h1>Atlantic Fishing Resort</h1>
-    <nav>
-        <ul>
-            <li>
-                <a href="#" class="active">Home</a>
-            </li>
-            <li>
-                <a href="units.html">Units</a>
-            </li>
-            <li>
-                <a href="activities.html">Activities</a>
-            </li>
-            <li>
-                <a href="reservations.html">Reservations</a>
-            </li>
-        </ul>
-    </nav>
-
+    <div id="mySidenav" class="sideNav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#" class="active">Home</a>
+        <a href="units.html">Units</a>
+        <a href="activities.html">Activities</a>
+        <a href="reservations.html">Reservations</a>
+    </div>
+    <div id="main">
+        <span style="font-size:24px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+    </div>
+    <div class="mainNav">
+        <nav>
+            <ul>
+                <li>
+                    <a href="#" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="units.html">Units</a>
+                </li>
+                <li>
+                    <a href="activities.html">Activities</a>
+                </li>
+                <li>
+                    <a href="reservations.html">Reservations</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>
 <main>
     <div id="hero">
@@ -62,7 +74,7 @@
         </article>
     </div>
     <article>
-        <div style="padding: 50px 50px;">
+        <div style="padding: 50px 10px;">
             <div class="flex-container">
                 <div>
                     <h3>Find us</h3>
@@ -73,7 +85,7 @@
                     <!--Position information will be inserted here-->
                     <div id="result"></div>
                 </div>
-                <div style="padding: 50px 0; text-align: center">
+                <div class="geoLoc">
                     <img id="default-image" src="images/default.jpg" alt="Atlantic Holiday Resort">
                     <img id="book-flight-image" src="images/book_flight.jpg" alt="Book a flight to Namibia"
                          style="display: none;">

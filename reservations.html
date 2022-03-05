@@ -12,64 +12,118 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
 
+    <script src="/js/hiddenNav.js"></script>
     <!-- Completed files -->
 </head>
 
 <body>
-<div id="wrapper">
+<div>
     <header>
         <h1>Atlantic Fishing Resort</h1>
-
-        <nav>
-            <ul>
-                <li>
-                  <a href="index.html">Home</a>
-                </li>
-                <li>
-                  <a href="units.html">Units</a>
-                </li>
-                <li>
-                  <a href="activities.html">Activities</a>
-                </li>
-                <li>
-                  <a href="#" class="active">Reservations</a>
-                </li>
-            </ul>
-        </nav>
+        <div id="mySidenav" class="sideNav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="units.html">Units</a>
+            <a href="activities.html">Activities</a>
+            <a href="#" class="active">Reservations</a>
+        </div>
+        <div id="main">
+            <span style="font-size:24px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+        </div>
+        <div class="mainNav">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="units.html">Units</a>
+                    </li>
+                    <li>
+                        <a href="activities.html">Activities</a>
+                    </li>
+                    <li>
+                        <a href="#" class="active">Reservations</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
-
     <main>
         <h2>Reservations at Atlantic Fishing Resort</h2>
-
-        <h3>Contact Us</h3>
-        <p>Required information is marked with an asterisk (*).</p>
-
-        <form method="post" action="http://webdevbasics.net/scripts/pacific.php">
-            <label for="myFName">* First Name:</label>
-            <input type="text" name="myFName" id="myFName" required="required">
-
-            <label for="myLName">* Last Name:</label>
-            <input type="text" name="myLName" id="myLName" required="required">
-
-            <label for="myEmail">* E-mail:</label>
-            <input type="email" name="myEmail" id="myEmail" required="required">
-
-            <label for="myPhone">Phone:</label>
-            <input type="tel" name="myPhone" id="myPhone">
-
-            <label for="myDate">Arrival Date:</label>
-            <input type="date" name="myDate" id="myDate">
-
-            <label for="myNights">Nights:</label>
-            <input type="number" name="myNights" id="myNights" min="1" max="14">
-
-            <label for="myComments">* Comments:</label>
-            <textarea name="myComments" id="myComments" rows="2" cols="20" required="required"></textarea>
-
-            <input type="submit" id="mySubmit" value="Submit">
-        </form>
+        <div class="form-padding">
+            <form method="post" action="http://webdevbasics.net/scripts/pacific.php">
+                <div class="container">
+                    <h3>Contact Us</h3>
+                    <p>Required information is marked with an asterisk (*).</p>
+                    <fieldset>
+                        <legend>Personal Information</legend>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="myFName">* First Name:</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" name="myFName" id="myFName" required="required">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="myLName">* Last Name:</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" name="myLName" id="myLName" required="required">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="myEmail">* E-mail:</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="email" name="myEmail" id="myEmail" required="required">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="myPhone">Phone:</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="tel" name="myPhone" id="myPhone">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Booking Details</legend>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="myDate">Arrival Date:</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="date" name="myDate" id="myDate">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="myNights">Nights:</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="number" name="myNights" id="myNights" min="1" max="14">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="myComments">* Comments:</label>
+                            </div>
+                            <div class="col-75">
+                                <textarea name="myComments" id="myComments" rows="2" cols="20"
+                                          required="required"></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <input type="submit" id="mySubmit" value="Submit">
+                </div>
+            </form>
+        </div>
     </main>
-
     <footer>
         Copyright © 1999 Atlantic Fishing Resort<br>
         <a href="mailto:yourfirstname@yourlastname.com">yourfirstname@yourlastname.com</a>

@@ -11,34 +11,45 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
 
+    <script src="/js/hiddenNav.js"></script>
     <!-- Completed files -->
 </head>
-
 <body>
-<div id="wrapper">
+<div>
     <header>
         <h1>Atlantic Fishing Resort</h1>
-
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="#" class="active">Units</a>
-                </li>
-                <li>
-                    <a href="activities.html">Activities</a>
-                </li>
-                <li>
-                    <a href="reservations.html">Reservations</a>
-                </li>
-            </ul>
-        </nav>
+        <div id="mySidenav" class="sideNav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="#" class="active">Units</a>
+            <a href="activities.html">Activities</a>
+            <a href="reservations.html">Reservations</a>
+        </div>
+        <div id="main">
+            <span style="font-size:24px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+        </div>
+        <div class="mainNav">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="active">Units</a>
+                    </li>
+                    <li>
+                        <a href="activities.html">Activities</a>
+                    </li>
+                    <li>
+                        <a href="reservations.html">Reservations</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
         <div id="banner">
-            <img id="large_image" src="banner_units_large.jpg" alt="Atlantic Coastal Town">
+            <img id="large_image" src="banner_units_large.jpg" alt="Atlantic Coastal Town" hidden="">
             <img id="small_image" src="banner_units_small.jpg" alt="Atlantic Coastal Town">
         </div>
         <div id="hero">
@@ -74,38 +85,35 @@
         <h3>Unit Packages</h3>
         <p>A variety of luxury unit packages are available. Choose a package below and contact us to begin your
             reservation. We’re happy to build a custom package just for you!</p>
-
-        <table>
-            <tr>
-                <th>Package Name</th>
-                <th>Description</th>
-                <th>Nights</th>
-                <th>Cost per Person</th>
-            </tr>
-
-            <tr>
-                <td>Weekend Escape</td>
-                <td class="text">Two breakfasts, a trail map, a picnic snack</td>
-                <td>2</td>
-                <td>$450</td>
-            </tr>
-
-            <tr>
-                <td>Weekday Retreat</td>
-                <td class="text">Four breakfasts, a trail map, guided shore fishing tour</td>
-                <td>4</td>
-                <td>$600</td>
-            </tr>
-
-            <tr>
-                <td>Full Adventure</td>
-                <td class="text">Six breakfasts, full fishing tackle rental daily, a trail map</td>
-                <td>7</td>
-                <td>$800</td>
-            </tr>
-        </table>
+        <div style="padding-left: 20px; padding-right: 20px; padding-bottom: 50px">
+            <table>
+                <tr>
+                    <th>Package Name</th>
+                    <th>Description</th>
+                    <th>Nights</th>
+                    <th>Cost per Person</th>
+                </tr>
+                <tr>
+                    <td>Weekend Escape</td>
+                    <td class="text">Two breakfasts, a trail map, a picnic snack</td>
+                    <td>2</td>
+                    <td>$450</td>
+                </tr>
+                <tr>
+                    <td>Weekday Retreat</td>
+                    <td class="text">Four breakfasts, a trail map, guided shore fishing tour</td>
+                    <td>4</td>
+                    <td>$600</td>
+                </tr>
+                <tr>
+                    <td>Full Adventure</td>
+                    <td class="text">Six breakfasts, full fishing tackle rental daily, a trail map</td>
+                    <td>7</td>
+                    <td>$800</td>
+                </tr>
+            </table>
+        </div>
     </main>
-
     <footer>
         Copyright © 1999 Atlantic Fishing Resort<br>
         <a href="mailto:yourfirstname@yourlastname.com">yourfirstname@yourlastname.com</a>

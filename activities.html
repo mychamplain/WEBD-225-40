@@ -12,55 +12,67 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
 
+    <script src="/js/hiddenNav.js"></script>
     <!-- Completed files -->
 </head>
 
 <body>
-<div id="wrapper">
+<div>
     <header>
         <h1>Atlantic Fishing Resort</h1>
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="units.html">Units</a>
-                </li>
-                <li>
-                    <a href="#" class="active">Activities</a>
-                </li>
-                <li>
-                    <a href="reservations.html">Reservations</a>
-                </li>
-            </ul>
-        </nav>
+        <div id="mySidenav" class="sideNav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="units.html">Units</a>
+            <a href="#" class="active">Activities</a>
+            <a href="reservations.html">Reservations</a>
+        </div>
+        <div id="main">
+            <span style="font-size:24px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+        </div>
+        <div class="mainNav">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="units.html">Units</a>
+                    </li>
+                    <li>
+                        <a href="#" class="active">Activities</a>
+                    </li>
+                    <li>
+                        <a href="reservations.html">Reservations</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
-
     <main>
         <h2>Activities while staying at Atlantic Fishing Resort</h2>
         <article id="activity-focus">
-        <div>
-            <h3>Dune Adventures</h3>
-            <p><span class="resort">Atlantic Fishing Resort</span> in situated in the dune belt of the Namib. Take a
-                guided
-                scenic drive either on camels or quadbikes for the more adventurous.</p>
-        </div>
-        <div>
-        <h3>Shore Fishing</h3>
-        <p>Fast open stretches of cold Atlantic shore gives ample opportunity for fishing from the beach. Buy or rent
-            fishing tackle. Find guided tours or venture out by yourself geared up with 4x4 and plenty of
-            sunscreens.</p>
-        </div>
-        <div>
-        <h3>Dolphin &amp; Bird Watching</h3>
-        <p>While anytime is a good time for bird watching at the Atlantic coast, we can organize dolphin and
-            birdwatching
-            boat trips available daily.</p>
-        </div>
+            <div>
+                <h3>Dune Adventures</h3>
+                <p><span class="resort">Atlantic Fishing Resort</span> in situated in the dune belt of the Namib. Take a
+                    guided
+                    scenic drive either on camels or quadbikes for the more adventurous.</p>
+            </div>
+            <div>
+                <h3>Shore Fishing</h3>
+                <p>Fast open stretches of cold Atlantic shore gives ample opportunity for fishing from the beach. Buy or
+                    rent
+                    fishing tackle. Find guided tours or venture out by yourself geared up with 4x4 and plenty of
+                    sunscreens.</p>
+            </div>
+            <div>
+                <h3>Dolphin &amp; Bird Watching</h3>
+                <p>While anytime is a good time for bird watching at the Atlantic coast, we can organize dolphin and
+                    birdwatching
+                    boat trips available daily.</p>
+            </div>
         </article>
     </main>
-
     <footer>
         Copyright © 1999 Atlantic Fishing Resort<br>
         <a href="mailto:yourfirstname@yourlastname.com">yourfirstname@yourlastname.com</a>
